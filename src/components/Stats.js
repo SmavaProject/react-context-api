@@ -7,8 +7,8 @@ const Stats = () => {
       //context of Consumer is equal to the value passed to Provider
       <Consumer>
         {context => {
-          const totalPlayers = context.length;
-          const totalPoints = context.reduce((total, player) => {
+          const totalPlayers = context.players.length;
+          const totalPoints = context.players.reduce((total, player) => {
             return total + player.score;
           }, 0);
 
